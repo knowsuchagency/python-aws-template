@@ -1,1 +1,1 @@
-from {{cookiecutter.project}}.chalice import app
+from {{cookiecutter.project|replace("-", "_")}}.chalice import app
