@@ -34,7 +34,7 @@ def check_formatting(c):
 @task(clean)
 def test(c):
     """Run unit tests."""
-    c.run("pytest test_{{cookiecutter.project}}/ -vv", pty=True)
+    c.run("pytest tests/ -vv", pty=True)
 
 
 @task(aliases=["build"])
