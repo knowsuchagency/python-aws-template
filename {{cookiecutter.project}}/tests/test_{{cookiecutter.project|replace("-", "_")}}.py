@@ -1,5 +1,5 @@
-from {{cookiecutter.project|replace("-", "_")}} import __version__
+import {{cookiecutter.project|replace("-", "_")}}
 
 
-def test_version():
-    assert __version__ == "0.1.0"
+def test_nothing():
+    assert True
