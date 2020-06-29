@@ -14,11 +14,11 @@ repos:
         language_version: python3.8
 
   - repo: local
-  hooks:
-    - id: tests
-      name: unit tests
-      language: system
-      entry: inv test
-      pass_filenames: false
-      stages:
-        - push
+    hooks:
+      - id: tests
+        name: unit tests
+        language: system
+        entry: inv test
+        pass_filenames: false
+        stages:
+          - push
