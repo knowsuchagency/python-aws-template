@@ -20,6 +20,7 @@ dev = [
     "black",
     "klaxon",
     "toml",
+    "invoke",
     "cdk-chalice-lite",
 ]
 
