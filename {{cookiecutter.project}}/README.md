@@ -1,39 +1,12 @@
 # {{cookiecutter.project}}
 
-## Features
-
-* [poetry][poetry]
-* [invoke][invoke]
-* [aws cdk][aws cdk]
-* [chalice][chalice]
-* [pre-commit][pre-commit]
+## Requires
+* Python >= 3.8
+* [aws cdk][cdk installation]
 
 ## Setup
 
 ```bash
-# set up python
-
-brew install python@3.8
-
-ln -s /usr/local/opt/python@3.8/bin/python3.8 /usr/local/bin/python3.8
-
-python3.8 -m pip install -U pip
-
-python3.8 -m pip install pipx # I recommend installing poetry this way
-
-# You may need to run the following on your local machine, and then launch a new shell.
-
-pipx ensurepath
-
-# install poetry and other dev clis
-
-pipx install poetry
-
-# setup npm and the aws-cdk cli
-
-npm install -g aws-cdk
-
-
 # clone the repo and cd into it
 
 git clone ...
@@ -48,7 +21,11 @@ python3.8 -m venv .venv
 
 # install project dependencies
 
-poetry install
+pip install -U pip
+
+pip install flit
+
+flit install
 
 # see what commands are available in tasks.py
 
@@ -63,8 +40,17 @@ inv install-hooks
 inv deploy
 ```
 
+## Features
+
+* [poetry][poetry]
+* [invoke][invoke]
+* [aws cdk][aws cdk]
+* [chalice][chalice]
+* [pre-commit][pre-commit]
+
 [poetry]: https://python-poetry.org
 [invoke]: http://www.pyinvoke.org
 [aws cdk]: https://docs.aws.amazon.com/cdk/api/latest/
 [chalice]: https://github.com/aws/chalice
 [pre-commit]: https://pre-commit.com
+[cdk installation]: https://docs.aws.amazon.com/cdk/latest/guide/cli.html

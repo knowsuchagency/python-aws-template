@@ -1,28 +1,27 @@
-[tool.poetry]
-name = "{{cookiecutter.project}}"
-version = "0.1.0"
-description = ""
-authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-chalice = "^1.14.1"
-
-
-[tool.poetry.dev-dependencies]
-pytest = "^5.2"
-"aws-cdk.core" = "^1.42.0"
-"aws-cdk.aws_lambda" = "^1.42.0"
-invoke = "^1.4.1"
-pre-commit = "^2.4.0"
-black = "^19.10b0"
-klaxon = "^1.1.1"
-toml = "^0.10.1"
-cdk-chalice-lite = "^0.1.4"
-
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "{{cookiecutter.project|replace('-', '_')}}"
+author = "{{cookiecutter.author}}"
+author-email = "{{cookiecutter.email}}"
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+# TODO: add version classifiers
+requires = [
+    "chalice",
+    "boto3"
+]
+
+[tool.flit.metadata.requires-extra]
+dev = [
+    "pytest",
+    "pre-commit",
+    "black",
+    "klaxon",
+    "toml",
+    "cdk-chalice-lite",
+]
 
 [tool.black]
 line-length=79

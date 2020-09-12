@@ -2,15 +2,24 @@
 
 This is a template for python packages/applications deployed to AWS
 
+## Requires
+* [cookiecutter](https://github.com/cookiecutter/cookiecutter)
+
+## Usage
+
+```bash
+cookiecutter https://gitlab.com/knowsuchagency/python-aws-template
+```
+
 ## Features
 
-* [poetry][poetry]
+* [flit][flit]
 * [invoke][invoke]
 * [aws cdk][aws cdk]
 * [chalice][chalice]
 * [pre-commit][pre-commit]
 
-[poetry]: https://python-poetry.org
+[flit]: https://github.com/takluyver/flit
 [invoke]: http://www.pyinvoke.org
 [aws cdk]: https://docs.aws.amazon.com/cdk/api/latest/
 [chalice]: https://github.com/aws/chalice
